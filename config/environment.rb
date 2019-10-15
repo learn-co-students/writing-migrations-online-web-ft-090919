@@ -1,3 +1,9 @@
+
+require 'rake'
+require 'active_record'
+require 'yaml/store'
+require 'ostruct'
+
 require 'bundler/setup'
 Bundler.require
 
@@ -17,4 +23,5 @@ def drop_db
   DB.tables.each do |table|
     DB.execute("DROP TABLE #{table}")
   end
+
 end
